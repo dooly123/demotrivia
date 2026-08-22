@@ -1,0 +1,36 @@
+{
+  "title": "Basis Trivia Night",
+  "teams": [
+    { "name": "Red", "color": "#E5484D" },
+    { "name": "Blue", "color": "#3E63DD" },
+    { "name": "Green", "color": "#30A46C" }
+  ],
+  "settings": {
+    "questionSeconds": 20,
+    "revealSeconds": 6,
+    "pointsDefault": 10,
+    "speedBonusMax": 0.5,
+    "inactiveLimit": 5,
+    "shuffle": true,
+    "maxAnswers": 4,
+    "statsPageSeconds": 8
+  },
+  "questions": [
+    { "q": "What is the capital city of Australia?", "a": ["Sydney", "Canberra", "Melbourne", "Perth"], "correct": 1, "fact": "Canberra was purpose-built as a compromise between Sydney and Melbourne." },
+    { "q": "How many bones are in the adult human body?", "a": ["186", "206", "226", "256"], "correct": 1, "fact": "Babies are born with around 270 bones that fuse over time." },
+    { "q": "Which planet has the most moons?", "a": ["Jupiter", "Saturn", "Uranus", "Neptune"], "correct": 1, "fact": "Saturn overtook Jupiter in 2023 with well over 140 confirmed moons." },
+    { "q": "What does the 'VR' in VR stand for?", "a": ["Visual Render", "Virtual Reality", "Vector Raster", "Very Real"], "correct": 1 },
+    { "q": "Which element has the chemical symbol 'O'?", "a": ["Gold", "Osmium", "Oxygen", "Oganesson"], "correct": 2 },
+    { "q": "In which year did the first human land on the Moon?", "a": ["1965", "1969", "1972", "1975"], "correct": 1, "points": 15, "fact": "Apollo 11 touched down on 20 July 1969." },
+    { "q": "How many strings does a standard guitar have?", "a": ["4", "5", "6", "7"], "correct": 2 },
+    { "q": "What is the largest ocean on Earth?", "a": ["Atlantic", "Indian", "Arctic", "Pacific"], "correct": 3, "fact": "The Pacific covers about a third of the planet's surface." },
+    { "q": "Which language has the most native speakers?", "a": ["English", "Spanish", "Mandarin Chinese", "Hindi"], "correct": 2 },
+    { "q": "What is the square root of 144?", "a": ["10", "11", "12", "14"], "correct": 2, "seconds": 12 },
+    { "q": "Which of these is NOT a programming language?", "a": ["Rust", "Python", "Cobra", "Lizard"], "correct": 3, "points": 20, "fact": "Cobra is a real language that runs on .NET." },
+    { "q": "What colour do you get by mixing blue and yellow paint?", "a": ["Purple", "Green", "Orange", "Brown"], "correct": 1 }
+  ],
+  "messages": {
+    "correct": ["Nice!", "Big brain.", "That's the one!", "Too easy."],
+    "wrong": ["Oof.", "Not quite.", "So close.", "Better luck next round."]
+  }
+}
