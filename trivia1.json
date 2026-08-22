@@ -1,22 +1,36 @@
-[
-  { "q": "What is the capital of Australia?", "a": ["Canberra", "Sydney", "Melbourne", "Brisbane"], "correct": 0, "points": 10, "fact": "Canberra was selected as the capital in 1908 as a compromise between Sydney and Melbourne." },
-  { "q": "Which element has the chemical symbol 'O'?", "a": ["Gold", "Oxygen", "Osmium", "Zinc"], "correct": 1, "points": 10, "fact": "Oxygen makes up about 21% of Earth's atmosphere by volume." },
-  { "q": "How many planet positions exist in our solar system?", "a": ["7", "8", "9", "10"], "correct": 1, "points": 10, "fact": "Pluto was reclassified as a dwarf planet in 2006, leaving 8 official planets." },
-  { "q": "Which ocean is the largest on Earth?", "a": ["Atlantic", "Indian", "Arctic", "Pacific"], "correct": 3, "points": 10, "fact": "The Pacific Ocean covers more than 30% of the Earth's surface area." },
-  { "q": "Who wrote 'Romeo and Juliet'?", "a": ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"], "correct": 0, "points": 10, "fact": "The play was written early in Shakespeare's career, around 1595." },
-  { "q": "What is the hardest natural substance on Earth?", "a": ["Gold", "Iron", "Diamond", "Quartz"], "correct": 2, "points": 10, "fact": "Diamonds consist of pure carbon arranged in a crystal lattice structure." },
-  { "q": "In what year did the Titanic sink?", "a": ["1912", "1905", "1920", "1898"], "correct": 0, "points": 10, "fact": "It sank on its maiden voyage from Southampton to New York." },
-  { "q": "Which gas do plants absorb during photosynthesis?", "a": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], "correct": 2, "points": 10, "fact": "Plants convert carbon dioxide and water into glucose and oxygen using sunlight." },
-  { "q": "What is the smallest country in the world by land area?", "a": ["Monaco", "Vatican City", "San Marino", "Liechtenstein"], "correct": 1, "points": 10, "fact": "Vatican City measures less than 0.2 square miles (0.49 km²)." },
-  { "q": "How many bones are in the adult human body?", "a": ["186", "206", "226", "246"], "correct": 1, "points": 10, "fact": "Babies are born with about 270 bones, many of which fuse together as they grow." },
-  { "q": "Which planet is known as the 'Red Planet'?", "a": ["Venus", "Mars", "Jupiter", "Saturn"], "correct": 1, "points": 10, "fact": "Its reddish hue comes from iron oxide (rust) on its surface." },
-  { "q": "What is the primary ingredient in traditional guacamole?", "a": ["Tomato", "Avocado", "Onion", "Lime"], "correct": 1, "points": 10, "fact": "Guacamole was originally created by the Aztecs in Mexico." },
-  { "q": "Who painted the Mona Lisa?", "a": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"], "correct": 1, "points": 10, "fact": "The portrait was painted between 1503 and 1519 and is displayed at the Louvre Museum." },
-  { "q": "What is the capital city of Japan?", "a": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"], "correct": 2, "points": 10, "fact": "Tokyo was originally a small fishing village named Edo." },
-  { "q": "Which instrument has 88 keys?", "a": ["Piano", "Harpsichord", "Accordion", "Organ"], "correct": 0, "points": 10, "fact": "A standard piano features 52 white keys and 36 black keys." },
-  { "q": "What is the speed of light in a vacuum (approximate)?", "a": ["150,000 km/s", "300,000 km/s", "450,000 km/s", "600,000 km/s"], "correct": 1, "points": 10, "fact": "Light travels at precisely 299,792,458 meters per second." },
-  { "q": "Which mammal is capable of true sustained flight?", "a": ["Flying Squirrel", "Bat", "Sugar Glider", "Flying Lemur"], "correct": 1, "points": 10, "fact": "Squirrels and gliders only glide; bats actively flap their wings to maintain height." },
-  { "q": "What is the largest organ of the human body?", "a": ["Liver", "Brain", "Skin", "Heart"], "correct": 2, "points": 10, "fact": "The skin accounts for approximately 16% of total adult body mass." },
-  { "q": "In video games, who is Mario's twin brother?", "a": ["Luigi", "Wario", "Yoshi", "Toad"], "correct": 0, "points": 10, "fact": "Luigi made his first appearance in the 1983 arcade game Mario Bros." },
-  { "q": "Which continent contains the Sahara Desert?", "a": ["Asia", "Africa", "Australia", "South America"], "correct": 1, "points": 10, "fact": "It covers approximately 3.6 million square miles across northern Africa." }
-]
+{
+  "title": "Basis Trivia Night",
+  "teams": [
+    { "name": "Red", "color": "#E5484D" },
+    { "name": "Blue", "color": "#3E63DD" },
+    { "name": "Green", "color": "#30A46C" }
+  ],
+  "settings": {
+    "questionSeconds": 20,
+    "revealSeconds": 6,
+    "pointsDefault": 10,
+    "speedBonusMax": 0.5,
+    "inactiveLimit": 5,
+    "shuffle": true,
+    "maxAnswers": 4,
+    "statsPageSeconds": 8
+  },
+  "questions": [
+    { "q": "What is the capital city of Australia?", "a": ["Sydney", "Canberra", "Melbourne", "Perth"], "correct": 1, "fact": "Canberra was purpose-built as a compromise between Sydney and Melbourne." },
+    { "q": "How many bones are in the adult human body?", "a": ["186", "206", "226", "256"], "correct": 1, "fact": "Babies are born with around 270 bones that fuse over time." },
+    { "q": "Which planet has the most moons?", "a": ["Jupiter", "Saturn", "Uranus", "Neptune"], "correct": 1, "fact": "Saturn overtook Jupiter in 2023 with well over 140 confirmed moons." },
+    { "q": "What does the 'VR' in VR stand for?", "a": ["Visual Render", "Virtual Reality", "Vector Raster", "Very Real"], "correct": 1 },
+    { "q": "Which element has the chemical symbol 'O'?", "a": ["Gold", "Osmium", "Oxygen", "Oganesson"], "correct": 2 },
+    { "q": "In which year did the first human land on the Moon?", "a": ["1965", "1969", "1972", "1975"], "correct": 1, "points": 15, "fact": "Apollo 11 touched down on 20 July 1969." },
+    { "q": "How many strings does a standard guitar have?", "a": ["4", "5", "6", "7"], "correct": 2 },
+    { "q": "What is the largest ocean on Earth?", "a": ["Atlantic", "Indian", "Arctic", "Pacific"], "correct": 3, "fact": "The Pacific covers about a third of the planet's surface." },
+    { "q": "Which language has the most native speakers?", "a": ["English", "Spanish", "Mandarin Chinese", "Hindi"], "correct": 2 },
+    { "q": "What is the square root of 144?", "a": ["10", "11", "12", "14"], "correct": 2, "seconds": 12 },
+    { "q": "Which of these is NOT a programming language?", "a": ["Rust", "Python", "Cobra", "Lizard"], "correct": 3, "points": 20, "fact": "Cobra is a real language that runs on .NET." },
+    { "q": "What colour do you get by mixing blue and yellow paint?", "a": ["Purple", "Green", "Orange", "Brown"], "correct": 1 }
+  ],
+  "messages": {
+    "correct": ["Nice!", "Big brain.", "That's the one!", "Too easy."],
+    "wrong": ["Oof.", "Not quite.", "So close.", "Better luck next round."]
+  }
+}
