@@ -1,0 +1,48 @@
+{
+  "title": "Basis Trivia Night",
+  "teams": [
+    { "name": "Red", "color": "#E5484D" },
+    { "name": "Blue", "color": "#3E63DD" },
+    { "name": "Green", "color": "#30A46C" }
+  ],
+  "settings": {
+    "questionSeconds": 20,
+    "revealSeconds": 6,
+    "pointsDefault": 10,
+    "speedBonusMax": 0.5,
+    "inactiveLimit": 5,
+    "shuffle": true,
+    "maxAnswers": 4,
+    "statsPageSeconds": 8
+  },
+  "questions": [
+    { "q": "Basis has one identity rule it really wants you to remember. Basis is a ___, not a platform.", "a": ["Vibe", "Framework", "Lifestyle brand", "Social VR app with extra steps"], "correct": 1, "fact": "Straight from the philosophy page: 'Basis is a framework, not a platform.' You can build a platform WITH it; Basis itself doesn't run one." },
+    { "q": "What's BasisVR's actual tagline?", "a": ["Move Fast and Desync Things", "It Works On My Headset", "Creator-First, Creative Freedom", "Jiggle Responsibly"], "correct": 2, "fact": "It's the title of every page on basisvr.org. 'Jiggle Responsibly' is still available for merch." },
+    { "q": "Basis is open source under which license?", "a": ["MIT", "GPLv3", "Apache 2.0", "The Honor System"], "correct": 0, "seconds": 12, "fact": "Every page ends with 'BasisVR. MIT Licensed.' Do (almost) whatever you want with it." },
+    { "q": "Basis is built with which engine-and-language combo?", "a": ["Unreal / C++", "Godot / GDScript", "Excel / VBA", "Unity / C#"], "correct": 3, "fact": "The philosophy page calls it 'a set of Unity/C# libraries and a demo showing how components fit together.' No spreadsheets were harmed." },
+    { "q": "Which Unity render pipeline is Basis built on?", "a": ["HDRP", "URP", "Built-in", "Whichever one the avatar's shader demands"], "correct": 1, "fact": "'Built with URP, targeting IL2CPP.' Please stop importing HDRP shaders." },
+    { "q": "Basis targets which scripting backend? (Yes, the one that makes builds take forever.)", "a": ["Mono", "CoreCLR", "IL2CPP", "A guy named Steve who types very fast"], "correct": 2, "points": 15, "fact": "IL2CPP turns .NET IL into C++ and compiles it to native code ahead of time. Steve is not real. Yet." },
+    { "q": "Basis names three building blocks of good VR: Presence, Spatialization, and ___.", "a": ["Embodiment", "Enlightenment", "Employment", "Eating snacks between load tests"], "correct": 0, "fact": "Embodiment: 'a tight, continuous loop between your body and its representation.' Snacks are still recommended." },
+    { "q": "Per community feedback quoted on the site, why do people wrongly assume Basis is a platform?", "a": ["Because it has a logo", "Because it has a Discord", "Because it has avatars", "Because tests run on servers"], "correct": 3, "fact": "The quote: 'People think Basis is a platform because tests run on servers. Keep a hard focus on it being a framework.'" },
+    { "q": "Which of these is NOT on the homepage's list of basics Basis handles for you?", "a": ["Networking", "Asset bundle loading", "XR input", "Emotional support"], "correct": 3, "fact": "The real list: XR input, audio, player controller, networking, asset bundle loading, 'and more.' Emotional support is handled by the Discord, unofficially." },
+    { "q": "According to the philosophy page, who works on Basis full-time?", "a": ["Dooly", "Three raccoons in a trench coat", "An intern who was never told they could leave", "The jiggle system, which became self-aware"], "correct": 0, "fact": "Donations 'directly support their livelihood and the project's momentum.' The raccoons are volunteers." },
+    { "q": "Basis is operated by a group of trusted contributors. What are they called?", "a": ["The Council", "The Load-Bearing Mods", "The Pillars", "The Elders"], "correct": 2, "fact": "The Pillars keep the effort 'on the narrow straight' so the project stays aligned and doesn't get derailed." },
+    { "q": "Where does Basis collect community donations?", "a": ["Patreon", "OpenCollective", "A jar on Dooly's desk", "GitHub Sponsors"], "correct": 1, "fact": "Donations plus companies funding shared infrastructure keep the lights on. The jar is a rumour." },
+    { "q": "The site names two hard problems solved by pooling funds from multiple organizations. Which pair?", "a": ["Voice chat and eye tracking", "Hand tracking and haptics", "The jiggle system and QUIC integration", "Fixing that one bug and the other one"], "correct": 2, "fact": "Bundling funds from several orgs lets Basis tackle problems that benefit everyone. Yes, physics bounce was one of them." },
+    { "q": "How often do the Talk & Test sessions happen?", "a": ["Weekly", "Daily", "Monthly", "Whenever the server stops crying"], "correct": 0, "fact": "'Join us weekly for our Talk & Test sessions - connect, create, and stress-test VR together.' The server's feelings are not tracked." },
+    { "q": "Basis would rather you use its own XR system than which Unity toolkit?", "a": ["SteamVR Unity Plugin", "XR Interaction Toolkit", "Oculus Integration", "Duct tape and Input.GetKey"], "correct": 1, "fact": "Basis says its XR system is 'built with real, hard-won experience from testing against a wide range of hardware.' Mixing in other stacks is a roadmap goal." },
+    { "q": "Which of these is NOT one of the four numbered principles on the philosophy page?", "a": ["Creator-First", "Communication is Expression", "Framework, Not Platform", "Ship It Friday, Fix It Monday"], "correct": 3, "fact": "The real four: Creator-First, Creative Freedom by Design, Communication is Expression, and Framework, Not Platform." },
+    { "q": "The planned neutral demo scene for museums, dataviz, theater and 'serious' apps is called the ___.", "a": ["Boring Room", "Lobby of Mild Interest", "Showroom", "Hall of Vanilla Props"], "correct": 2, "fact": "Showroom: spawning props, sync'd interactions, avatar basics, conservative defaults. The example props are literally 'car, robots.'" },
+    { "q": "Basis plans a second, experimental client for strain-testing features that 'may change rapidly'. Its name?", "a": ["Community Testbed", "The Crash Cart", "Load Test Simulator 2026", "Dooly's Chaos Chamber"], "correct": 0, "fact": "The Community Testbed is the successor to today's ad-hoc tests and explicitly NOT the public-facing showcase, so expect things to be on fire." },
+    { "q": "The in-development quickstart doc promises clone, open project, press Play. What's it called?", "a": ["Hello Basis", "5-Minute Run", "Zero to VR", "First Light"], "correct": 1, "points": 15, "fact": "Five minutes is the goal. Unity's first import is not included. Nothing can help you there." },
+    { "q": "Basis isn't publicly on Steam yet. How does the site say you get in?", "a": ["Buy it on the Steam store", "Chant 'framework, not platform' into a mirror", "Beat Dooly in a load test", "Request a key from the admin team in Discord"], "correct": 3, "fact": "Once approved, Discord also offers onboarding, support, and avatar porting help for Unity-based assets." },
+    { "q": "The roadmap wants Basis modules shipped as what, so you can grab just networking without the whole stack?", "a": ["NuGet packages", "Unity packages", "Docker images", "One 9 GB zip named final_FINAL_v2"], "correct": 1, "fact": "Modularity is 'a roadmap goal, not fully realized yet.' final_FINAL_v2.zip remains the industry standard." },
+    { "q": "The site describes Basis as 'whitelabel' and ___.", "a": ["Cloud-only", "Subscription-based", "Self-hostable", "Mildly haunted"], "correct": 2, "fact": "Fully rebrandable into your own VR space, and 'player assets remain compatible across instances.' Haunting not guaranteed." },
+    { "q": "Which social network does the homepage list for 'Updates and Community posts'?", "a": ["Bluesky", "Mastodon", "MySpace", "LinkedIn, unfortunately"], "correct": 0, "fact": "Twitter/X is listed separately for 'Short news & Release notes.' MySpace remains unclaimed." },
+    { "q": "Finish the philosophy page's closing pitch: 'Use the framework. Keep your freedom. ___'", "a": ["Touch grass.", "Blame the network.", "Merge the PR.", "Grow with us."], "correct": 3, "fact": "That's the 'Build with Basis' send-off. 'Blame the network' is the unofficial motto of every load test." }
+  ],
+  "messages": {
+    "correct": ["Nice!", "Big brain.", "That's the one!", "Too easy."],
+    "wrong": ["Oof.", "Not quite.", "So close.", "Better luck next round."]
+  }
+}
