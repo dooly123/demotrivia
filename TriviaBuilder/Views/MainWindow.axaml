@@ -1,0 +1,255 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TriviaBuilder.ViewModels"
+        xmlns:models="using:TriviaBuilder.Models"
+        xmlns:services="using:TriviaBuilder.Services"
+        xmlns:converters="using:TriviaBuilder.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="920" d:DesignHeight="820"
+        x:Class="TriviaBuilder.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Width="960" Height="840"
+        Background="#14161C"
+        DragDrop.AllowDrop="True"
+        Title="Trivia Builder">
+
+    <Window.Resources>
+        <converters:HexColorConverter x:Key="HexColorConverter" />
+    </Window.Resources>
+
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" ColumnDefinitions="Auto,*,Auto,Auto,Auto,Auto" Margin="14">
+            <TextBlock Grid.Column="0" Text="Trivia Builder" FontSize="16" FontWeight="Bold"
+                       VerticalAlignment="Center" Margin="0,0,16,0" />
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Files}" SelectedItem="{Binding SelectedFile}"
+                      HorizontalAlignment="Stretch">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="services:TriviaFileEntry">
+                        <TextBlock Text="{Binding FileName}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Grid.Column="2" Content="Open…" Click="OpenFile_Click" Margin="8,0,0,0" />
+            <Button Grid.Column="3" Content="New" Command="{Binding NewSetCommand}" Margin="8,0,0,0" />
+            <Button Grid.Column="4" Content="Duplicate" Command="{Binding DuplicateCommand}" Margin="8,0,0,0" />
+            <Button Grid.Column="5" Content="Delete" Classes="danger" Command="{Binding DeleteCommand}" Margin="8,0,0,0" />
+        </Grid>
+
+        <Grid DockPanel.Dock="Bottom" ColumnDefinitions="*,Auto" Margin="14,10">
+            <ItemsControl Grid.Column="0" ItemsSource="{Binding Errors}" VerticalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <TextBlock Text="{Binding}" Foreground="#FFB4B6" FontSize="12" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
+                <TextBlock Text="{Binding StatusText}" Foreground="#9AA1B1" FontSize="12" VerticalAlignment="Center" />
+                <Button Content="Save" Command="{Binding SaveCommand}" />
+            </StackPanel>
+        </Grid>
+
+        <ScrollViewer>
+            <StackPanel Spacing="14" Margin="14" IsVisible="{Binding Current, Converter={x:Static ObjectConverters.IsNotNull}}">
+
+                <Border Classes="card">
+                    <StackPanel Spacing="6">
+                        <TextBlock Text="Title" Classes="field-label" />
+                        <TextBox Text="{Binding Current.Title, Mode=TwoWay}" FontSize="15" />
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="card">
+                    <StackPanel Spacing="8">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <TextBlock Grid.Column="0" Text="TEAMS" Classes="section-title" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Content="+ Team" Command="{Binding AddTeamCommand}" />
+                        </Grid>
+                        <ItemsControl ItemsSource="{Binding Current.Teams}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="models:Team">
+                                    <Grid ColumnDefinitions="Auto,Auto,*,Auto" Margin="0,4">
+                                        <ColorPicker Grid.Column="0" Color="{Binding Color, Mode=TwoWay, Converter={StaticResource HexColorConverter}}"
+                                                     Width="44" Height="32" Margin="0,0,8,0" />
+                                        <TextBox Grid.Column="1" Text="{Binding Color, Mode=TwoWay}" Width="100"
+                                                 Margin="0,0,8,0" PlaceholderText="#RRGGBB" />
+                                        <TextBox Grid.Column="2" Text="{Binding Name, Mode=TwoWay}" PlaceholderText="Team name" />
+                                        <Button Grid.Column="3" Content="✕" Classes="danger" Margin="8,0,0,0"
+                                                Click="RemoveTeam_Click" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="card">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="SETTINGS" Classes="section-title" />
+                        <WrapPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Question time (sec)" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.QuestionSeconds, Mode=TwoWay}"
+                                               Minimum="3" Maximum="300" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Reveal time (sec)" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.RevealSeconds, Mode=TwoWay}"
+                                               Minimum="1" Maximum="60" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Default points" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.PointsDefault, Mode=TwoWay}"
+                                               Minimum="1" Maximum="1000" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Max speed bonus (0-1)" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.SpeedBonusMax, Mode=TwoWay}"
+                                               Minimum="0" Maximum="2" Increment="0.05" FormatString="0.00" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Inactive after N misses" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.InactiveLimit, Mode=TwoWay}"
+                                               Minimum="0" Maximum="50" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Max answers shown" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.MaxAnswers, Mode=TwoWay}"
+                                               Minimum="2" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4">
+                                <TextBlock Text="Stats page time (sec)" Classes="field-label" />
+                                <NumericUpDown Value="{Binding Current.Settings.StatsPageSeconds, Mode=TwoWay}"
+                                               Minimum="3" Maximum="60" Increment="1" FormatString="0" />
+                            </StackPanel>
+                            <StackPanel Width="180" Margin="0,0,12,10" Spacing="4" VerticalAlignment="Bottom">
+                                <CheckBox Content="Shuffle answers" IsChecked="{Binding Current.Settings.Shuffle, Mode=TwoWay}" />
+                            </StackPanel>
+                        </WrapPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="card">
+                    <StackPanel Spacing="8">
+                        <Grid ColumnDefinitions="*,Auto,Auto">
+                            <TextBlock Grid.Column="0" Text="QUESTIONS" Classes="section-title" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Content="Paste Questions…" Click="PasteQuestions_Click" Margin="0,0,8,0" />
+                            <Button Grid.Column="2" Content="+ Question" Command="{Binding AddQuestionCommand}" />
+                        </Grid>
+                        <ItemsControl ItemsSource="{Binding Current.Questions}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="models:Question">
+                                    <Expander Classes="question-card" Margin="0,6" IsExpanded="{Binding IsExpanded, Mode=TwoWay}"
+                                              HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                        <Expander.Header>
+                                            <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+                                                <TextBlock Grid.Column="0" Text="{Binding Text}" TextTrimming="CharacterEllipsis"
+                                                           VerticalAlignment="Center" Margin="0,0,8,0" />
+                                                <Button Grid.Column="1" Content="↑" Click="MoveQuestionUp_Click" />
+                                                <Button Grid.Column="2" Content="↓" Margin="4,0,0,0" Click="MoveQuestionDown_Click" />
+                                                <Button Grid.Column="3" Content="✕" Classes="danger" Margin="4,0,0,0"
+                                                        Click="RemoveQuestion_Click" />
+                                            </Grid>
+                                        </Expander.Header>
+                                        <StackPanel Spacing="8" Margin="0,10,0,0">
+                                            <TextBox Text="{Binding Text, Mode=TwoWay}" AcceptsReturn="True"
+                                                     TextWrapping="Wrap" PlaceholderText="Question text" />
+
+                                            <ItemsControl ItemsSource="{Binding Answers}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate x:DataType="models:TextItem">
+                                                        <Grid ColumnDefinitions="*,Auto" Margin="0,3">
+                                                            <TextBox Grid.Column="0" Text="{Binding Value, Mode=TwoWay}" PlaceholderText="Answer" />
+                                                            <Button Grid.Column="1" Content="✕" Classes="danger" Margin="6,0,0,0"
+                                                                    Click="RemoveAnswer_Click" />
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+
+                                            <Grid ColumnDefinitions="Auto,*">
+                                                <Button Grid.Column="0" Content="+ Answer" Click="AddAnswer_Click" />
+                                                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6" HorizontalAlignment="Right">
+                                                    <TextBlock Text="Correct answer:" VerticalAlignment="Center" Classes="field-label" />
+                                                    <ComboBox ItemsSource="{Binding Answers}" SelectedIndex="{Binding Correct, Mode=TwoWay}" Width="220">
+                                                        <ComboBox.ItemTemplate>
+                                                            <DataTemplate x:DataType="models:TextItem">
+                                                                <TextBlock Text="{Binding Value}" TextTrimming="CharacterEllipsis" />
+                                                            </DataTemplate>
+                                                        </ComboBox.ItemTemplate>
+                                                    </ComboBox>
+                                                </StackPanel>
+                                            </Grid>
+
+                                            <Grid ColumnDefinitions="140,140,*">
+                                                <StackPanel Grid.Column="0" Spacing="4" Margin="0,0,10,0">
+                                                    <TextBlock Text="Points override" Classes="field-label" />
+                                                    <NumericUpDown Value="{Binding Points, Mode=TwoWay}" Minimum="1" Maximum="1000" Increment="1" FormatString="0" />
+                                                </StackPanel>
+                                                <StackPanel Grid.Column="1" Spacing="4">
+                                                    <TextBlock Text="Time override (sec)" Classes="field-label" />
+                                                    <NumericUpDown Value="{Binding Seconds, Mode=TwoWay}" Minimum="3" Maximum="300" Increment="1" FormatString="0" />
+                                                </StackPanel>
+                                            </Grid>
+
+                                            <StackPanel Spacing="4">
+                                                <TextBlock Text="Fun fact (shown on reveal, optional)" Classes="field-label" />
+                                                <TextBox Text="{Binding Fact, Mode=TwoWay}" AcceptsReturn="True"
+                                                         TextWrapping="Wrap" PlaceholderText="Optional fact" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Expander>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="card">
+                    <Grid ColumnDefinitions="*,*">
+                        <StackPanel Grid.Column="0" Spacing="8" Margin="0,0,10,0">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <TextBlock Grid.Column="0" Text="CORRECT MESSAGES" Classes="section-title" VerticalAlignment="Center" />
+                                <Button Grid.Column="1" Content="+" Command="{Binding AddCorrectMessageCommand}" />
+                            </Grid>
+                            <ItemsControl ItemsSource="{Binding Current.CorrectMessages}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="models:TextItem">
+                                        <Grid ColumnDefinitions="*,Auto" Margin="0,3">
+                                            <TextBox Grid.Column="0" Text="{Binding Value, Mode=TwoWay}" />
+                                            <Button Grid.Column="1" Content="✕" Classes="danger" Margin="6,0,0,0"
+                                                    Click="RemoveCorrectMessage_Click" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Spacing="8">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <TextBlock Grid.Column="0" Text="WRONG MESSAGES" Classes="section-title" VerticalAlignment="Center" />
+                                <Button Grid.Column="1" Content="+" Command="{Binding AddWrongMessageCommand}" />
+                            </Grid>
+                            <ItemsControl ItemsSource="{Binding Current.WrongMessages}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="models:TextItem">
+                                        <Grid ColumnDefinitions="*,Auto" Margin="0,3">
+                                            <TextBox Grid.Column="0" Text="{Binding Value, Mode=TwoWay}" />
+                                            <Button Grid.Column="1" Content="✕" Classes="danger" Margin="6,0,0,0"
+                                                    Click="RemoveWrongMessage_Click" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

@@ -1,0 +1,44 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TriviaBuilder.App"
+             xmlns:local="using:TriviaBuilder"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://Avalonia.Controls.ColorPicker/Themes/Fluent/Fluent.xaml" />
+
+        <!-- Shared across every window (not just MainWindow) so dialogs match. -->
+        <Style Selector="Border.card">
+            <Setter Property="Background" Value="#1C1F27" />
+            <Setter Property="BorderBrush" Value="#2E3340" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Padding" Value="14" />
+        </Style>
+        <Style Selector="Expander.question-card">
+            <Setter Property="Background" Value="#232733" />
+            <Setter Property="BorderBrush" Value="#2E3340" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Padding" Value="12" />
+        </Style>
+        <Style Selector="TextBlock.section-title">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Foreground" Value="#9AA1B1" />
+        </Style>
+        <Style Selector="TextBlock.field-label">
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="Foreground" Value="#9AA1B1" />
+        </Style>
+        <Style Selector="Button.danger">
+            <Setter Property="Foreground" Value="#FFB4B6" />
+        </Style>
+    </Application.Styles>
+</Application>

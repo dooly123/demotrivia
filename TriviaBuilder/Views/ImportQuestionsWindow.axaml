@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TriviaBuilder.Views.ImportQuestionsWindow"
+        Width="640" Height="540"
+        Background="#14161C"
+        WindowStartupLocation="CenterOwner"
+        Title="Paste Questions">
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto" Margin="16">
+        <TextBlock Grid.Row="0" Margin="0,0,0,8" Foreground="#9AA1B1" FontSize="12" TextWrapping="Wrap"
+                   Text="Paste one or more questions: the question text, a blank line, then one answer per line. The first answer is treated as correct — mark a different one with a leading * to override. Leave a blank line between questions to paste several at once." />
+        <TextBox Grid.Row="1" Name="PasteBox" AcceptsReturn="True" TextWrapping="Wrap"
+                 FontFamily="Cascadia Mono,Consolas,monospace" VerticalContentAlignment="Top" />
+        <TextBlock Grid.Row="2" Name="SummaryText" Margin="0,8,0,0" FontSize="12" TextWrapping="Wrap" Foreground="#9AA1B1" />
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8" Margin="0,10,0,0">
+            <Button Content="Cancel" Click="Cancel_Click" />
+            <Button Name="ImportButton" Content="Import" Click="Import_Click" IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Window>

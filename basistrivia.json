@@ -1,0 +1,34 @@
+{
+  "title": "Basis Trivia Night",
+  "teams": [
+    {"name":"Red","color":"#E50000"},
+    {"name":"Blue","color":"#3E63DD"},
+    {"name":"Green","color":"#30A46C"},
+    {"name":"Yellow","color":"#F7FF00"},
+    {"name":"Orange","color":"#FF6900"}
+  ],
+  "settings": {
+    "questionSeconds": 20,
+    "revealSeconds": 6,
+    "pointsDefault": 10,
+    "speedBonusMax": 0.5,
+    "inactiveLimit": 5,
+    "shuffle": true,
+    "maxAnswers": 6,
+    "statsPageSeconds": 8
+  },
+  "questions": [
+    {"q":"What was Poiyomi shader originally named?","a":["Poiyomi Master Shader","Poiyomi Uber Shader","Poiyomi Shader","Poiyomi Toon Shader"],"correct":0,"fact":"Poiyomi spends over 150k on business expenses yearly! by Poiyomi"},
+    {"q":"How Many trees are on the planet?","a":["3.04 trillion trees","2.5 trillion trees","1.2 trillion trees","7 trillion trees"],"correct":0,"fact":"The Australian Defence minister has played basis!  submitted by Negantropic"},
+    {"q":"what size was the resin screw used on 1.0 babble kits?","a":["m4","m10","1/4\u0022 20","m7-ish"],"correct":0},
+    {"q":"What is the most popular facial tracking hardware for use in Social VR (via VRCFT)","a":["Quest Pro","Vive Face Tracker/Pro Eye","iPhone","Pico","Babble","Bigscreen"],"correct":0,"fact":"Quest Pro (~32k unique users) Vive Face Tracker/Pro Eye (~14k unique users) iPhone (~10k unique users) Pico (~12k unique users) Babble (~8.5k unique users) Bigscreen (~1.9k unique users)  submitted by VRCFT"},
+    {"q":"How many usable IP addresses are in an IPv4 /24 subnet?","a":["24","254","255","69"],"correct":1,"fact":"Did you know the final address of an IPv4 subnet is actually the broadcast address? If you ping it, it will attempt to ping all the computers on it."},
+    {"q":"What was the time period that humans started to work metal?","a":["Stone Age","Bronze Age","Steel Age","Industrial Revolution"],"correct":1},
+    {"q":"Which network topology layout connects devices to a central appliance?","a":["Bus","Star","Ring","Hybrid"],"correct":0,"fact":"The first ever message sent over the Internet was sent by computer scientist, Vint Cerf in 1969. The message read, \u0022Lo\u0022.  Submitted by CMC"},
+    {"q":"What is mark zuckerbergs favourate sauce?","a":["sweet baby rays!","Famous Dave\u0027s","Rufus Teague","Jack Daniel\u0027s Original"],"correct":0,"fact":"A bottle of Sweet Baby Ray\u0027s briefly appeared in the background of a 2021 video featuring Mark Zuckerberg, generating an estimated $2 million in free media exposure. from Shane from sidequest"}
+  ],
+  "messages": {
+    "correct": ["Nice!","Big brain.","That\u0027s the one!","Too easy.","Thats so based!"],
+    "wrong": ["Oof.","Not quite.","So close.","Better luck next round."]
+  }
+}
