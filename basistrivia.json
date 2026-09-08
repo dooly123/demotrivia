@@ -25,7 +25,12 @@
     {"q":"How many usable IP addresses are in an IPv4 /24 subnet?","a":["24","254","255","69"],"correct":1,"fact":"Did you know the final address of an IPv4 subnet is actually the broadcast address? If you ping it, it will attempt to ping all the computers on it."},
     {"q":"What was the time period that humans started to work metal?","a":["Stone Age","Bronze Age","Steel Age","Industrial Revolution"],"correct":1},
     {"q":"Which network topology layout connects devices to a central appliance?","a":["Bus","Star","Ring","Hybrid"],"correct":0,"fact":"The first ever message sent over the Internet was sent by computer scientist, Vint Cerf in 1969. The message read, \u0022Lo\u0022.  Submitted by CMC"},
-    {"q":"What is mark zuckerbergs favourate sauce?","a":["sweet baby rays!","Famous Dave\u0027s","Rufus Teague","Jack Daniel\u0027s Original"],"correct":0,"fact":"A bottle of Sweet Baby Ray\u0027s briefly appeared in the background of a 2021 video featuring Mark Zuckerberg, generating an estimated $2 million in free media exposure. from Shane from sidequest"}
+    {"q":"What is Mark Zuckerbergs favourite sauce?","a":["sweet baby rays!","Famous Dave\u0027s","Rufus Teague","Jack Daniel\u0027s Original"],"correct":0,"fact":"A bottle of Sweet Baby Ray\u0027s briefly appeared in the background of a 2021 video featuring Mark Zuckerberg, generating an estimated $2 million in free media exposure. from Shane from sidequest"},
+    {"q":"Lyuma asks What Is Basis?","a":["Standalone app","Virtual world","Framework for developers","Platform for content"],"correct":2},
+    {"q":"The SlimeVR skeleton model default proportions are based off of who at SlimeVR?","a":["ZRock35","Butterscotch","Futura","Erimel"],"correct":0,"fact":"SlimeVR\u0027s Reset Feedback meow sound is Polymoria (co-founder of SlimeVR)\u0027s processed voice! by SlimeVR"},
+    {"q":"what games use Naelstrof and Vilars Jiggle Physics System?","a":["Ultra Kill","DeadLock","OutWilds","Rust"],"correct":0,"fact":"Jiggle Physics has been a Ongoing project over the last 5 years."},
+    {"q":"Valve was founded in what year?","a":["1994","1996","1998","2000"],"correct":1,"fact":"counting is easy! 1 2 4 5 6 7 8 9 10"},
+    {"q":"What is the capital of Australia?","a":["Melbourne","Brisbane","Sydney","Canberra"],"correct":3,"fact":" Chosen as a planned national capital in 1908 as a compromise between rival cities Sydney and Melbourne. submitted by dooly"}
   ],
   "messages": {
     "correct": ["Nice!","Big brain.","That\u0027s the one!","Too easy.","Thats so based!"],
