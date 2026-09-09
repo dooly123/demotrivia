@@ -32,7 +32,7 @@
     {"q":"Valve was founded in what year?","a":["1994","1996","1998","2000"],"correct":1,"fact":"counting is easy! 1 2 4 5 6 7 8 9 10"},
     {"q":"What is the capital of Australia?","a":["Melbourne","Brisbane","Sydney","Canberra"],"correct":3,"fact":" Chosen as a planned national capital in 1908 as a compromise between rival cities Sydney and Melbourne. submitted by dooly"},
     {"q":"what\u2019s the capital of California?","a":["LA","San Fransisco","Sacramento","Santa Cruz"],"correct":2,"fact":"City of Trees: Sacramento has one of the highest numbers of trees per capita in the world, rivaling even Paris. Submitted by Little Poe"},
-    {"q":"What is the name of the main character in Stephen King\u0027s \u0022The Lawnmower Man\u0022?","a":["A: Johnny","B: Lawrence","C: Jobe","D: Thomas"],"correct":2,"fact":"The director of the 1992 Lawnmower Man adaptation, Brett Leonard, was inducted into the AWE XR Hall of Fame in 2026 for bringing virtual reality into pop culture."}
+    {"q":"What is the name of the main character in Stephen King\u0027s \u0022The Lawnmower Man\u0022?","a":["A: Johnny","B: Lawrence","C: Jobe","D: Thomas"],"correct":2,"fact":"The director of the 1992 Lawnmower Man adaptation, Brett Leonard, was inducted into the AWE XR Hall of Fame in 2026 for bringing virtual reality into pop culture. Submitted by Phia"}
   ],
   "messages": {
     "correct": ["Nice!","Big brain.","That\u0027s the one!","Too easy.","Thats so based!"],
