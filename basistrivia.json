@@ -39,8 +39,7 @@
     {"q":"What is Vegemite mainly made from?","a":["Fermented soy beans","Leftover brewer\u0027s yeast","Beef stock","Burnt toast"],"correct":1,"fact":"Chemist Cyril Callister created Vegemite in Melbourne in 1922 using yeast left over from beer brewing."},
     {"q":"The Tim Tam biscuit was named after what?","a":["A cartoon character","A pet dog","A racehorse","A pop song"],"correct":2,"fact":"Ross Arnott saw a horse named Tim Tam win the 1958 Kentucky Derby and borrowed the name for the biscuit."},
     {"q":"What has become an election day tradition at Australian polling places?","a":["A ballot pie","A voter lamington","A freedom scone","A democracy sausage"],"correct":3,"fact":"Voting is compulsory in Australia, and democracy sausage was named Australia\u0027s Word of the Year in 2016."},
-    {"q":"In 1988 Australia became the first country to make banknotes out of what?","a":["Plastic (polymer)","Silk","Hemp","Aluminium"],"correct":0,"fact":"Polymer notes last far longer than paper ones, have see-through windows that make them hard to fake, and can survive the washing machine."},
-    {"q":"The Sydney Opera House was designed by an architect from which country?","a":["England","Italy","Denmark","United States"],"correct":2,"fact":"J\u00F8rn Utzon quit the project in 1966 and never returned to Australia to see the finished building, which opened in 1973."}
+    {"q":"In 1988 Australia became the first country to make banknotes out of what?","a":["Plastic (polymer)","Silk","Hemp","Aluminium"],"correct":0,"fact":"Polymer notes last far longer than paper ones, have see-through windows that make them hard to fake, and can survive the washing machine."}
   ],
   "messages": {
     "correct": ["Nice!","Big brain.","That\u0027s the one!","Too easy.","Thats so based!"],
