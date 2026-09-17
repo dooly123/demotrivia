@@ -19,7 +19,7 @@
   },
   "questions": [
     {"q":"What was Poiyomi shader originally named?","a":["Poiyomi Master Shader","Poiyomi Uber Shader","Poiyomi Shader","Poiyomi Toon Shader"],"correct":0,"fact":"Poiyomi spends over 150k on business expenses yearly! by Poiyomi"},
-    {"q":"How Many trees are on the planet?","a":["3.04 trillion trees","2.5 trillion trees","1.2 trillion trees","7 trillion trees"],"correct":0,"fact":"The Australian Defence minister has played basis!  submitted by Negantropic"},
+    {"q":"How Many trees are on the planet?","a":["3 trillion trees","2.5 trillion trees","1.2 trillion trees","7 trillion trees"],"correct":0,"fact":"The Australian Defence minister has played basis!  submitted by Negantropic"},
     {"q":"what size was the resin screw used on 1.0 babble kits?","a":["m4","m10","1/4\u0022 20","m7-ish"],"correct":3},
     {"q":"What is the most popular facial tracking hardware for use in Social VR (via VRCFT)","a":["Quest Pro","Vive Face Tracker/Pro Eye","iPhone","Pico","Babble","Bigscreen"],"correct":0,"fact":"Quest Pro (~32k unique users) Vive Face Tracker/Pro Eye (~14k unique users) iPhone (~10k unique users) Pico (~12k unique users) Babble (~8.5k unique users) Bigscreen (~1.9k unique users)  submitted by VRCFT"},
     {"q":"How many usable IP addresses are in an IPv4 /24 subnet?","a":["24","254","255","69"],"correct":1,"fact":"Did you know the final address of an IPv4 subnet is actually the broadcast address? If you ping it, it will attempt to ping all the computers on it."},
@@ -35,11 +35,10 @@
     {"q":"what\u2019s the capital of California?","a":["LA","San Fransisco","Sacramento","Santa Cruz"],"correct":2,"fact":"City of Trees: Sacramento has one of the highest numbers of trees per capita in the world, rivaling even Paris. Submitted by Little Poe"},
     {"q":"When Graham Gaylor first built VRChat in 2014, what was its original purpose?","a":["virtual meeting space for VR enthusiasts to talk about VR itself","multiplayer game hub for hosting virtual LAN parties","remote collaboration tool for distributed game development teams","virtual classroom platform for University lectures","dating app where users could meet as customizable avatars","tech demo built to pitch Oculus on social features"],"correct":0,"fact":"The first VR headset ever built was created by Ivan Sutherland in 1968, and was so heavy that it couldn\u0027t rest on a person\u0027s head at all, so it had to be suspended from the ceiling by a mechanical arm. - Tizzy"},
     {"q":"In 1932 the Australian army went to war against which animal?","a":["Kangaroos","Rabbits","Emus","Cane toads"],"correct":2,"fact":"In the Great Emu War, soldiers with machine guns were sent to Western Australia to stop emus destroying wheat crops. The emus mostly won."},
-    {"q":"Which of these Australian mammals lays eggs?","a":["Koala","Wombat","Kangaroo","Platypus"],"correct":3,"fact":"The platypus and the echidna are the only mammals on Earth that lay eggs, and male platypuses have venomous spurs on their back legs."},
     {"q":"What is Vegemite mainly made from?","a":["Fermented soy beans","Leftover brewer\u0027s yeast","Beef stock","Burnt toast"],"correct":1,"fact":"Chemist Cyril Callister created Vegemite in Melbourne in 1922 using yeast left over from beer brewing."},
     {"q":"The Tim Tam biscuit was named after what?","a":["A cartoon character","A pet dog","A racehorse","A pop song"],"correct":2,"fact":"Ross Arnott saw a horse named Tim Tam win the 1958 Kentucky Derby and borrowed the name for the biscuit."},
     {"q":"What has become an election day tradition at Australian polling places?","a":["A ballot pie","A voter lamington","A freedom scone","A democracy sausage"],"correct":3,"fact":"Voting is compulsory in Australia, and democracy sausage was named Australia\u0027s Word of the Year in 2016."},
-    {"q":"In 1988 Australia became the first country to make banknotes out of what?","a":["Plastic (polymer)","Silk","Hemp","Aluminium"],"correct":0,"fact":"Polymer notes last far longer than paper ones, have see-through windows that make them hard to fake, and can survive the washing machine."}
+    {"q":"Which of these licenses is not considered Open Source?","a":["GPL","MIT","CC BY-NC","BSD"],"correct":2}
   ],
   "messages": {
     "correct": ["Nice!","Big brain.","That\u0027s the one!","Too easy.","Thats so based!"],
